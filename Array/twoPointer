@@ -1,0 +1,26 @@
+while(left<right){
+    int current_sum==arr[left] + arr[right]
+    if(current_sum == target){
+        return {left,right};
+    }
+    else if(current_sum  < target){
+        left++;
+    }
+    else{
+        right--;
+    }
+}
+
+
+
+// use 
+1. Sorting and Searching Problems
+2. Removing Duplicates or Modifying Arrays
+3. Subarray Problems
+4. String Manipulation
+5. Merging Problems
+6. Geometric Problems
+7. Miscellaneous Problems
+
+
+
