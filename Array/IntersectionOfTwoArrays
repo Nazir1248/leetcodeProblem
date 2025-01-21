@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool checkDuplicate(vector<int> &nums1,int n){
+        for(int i=0;i<nums1.size();i++){
+            if(n==nums1[i]){
+                return true;
+            }
+        }
+        return false;
+    }
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        vector<int> arr;
+        for(int i=0;i<nums2.size();i++){
+            if(checkDuplicate(nums1,nums2[i])){
+                arr.push_back(nums2[i]);
+            }
+        }
+        sort(arr.begin(),arr.end());
+        auto it = unique(arr.begin(),arr.end());
+        arr.erase(it,arr.end());
+        return arr;
+    }
+};
